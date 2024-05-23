@@ -9,31 +9,34 @@
 </head>
 
 <body>
-    <div id="app">
-        <form id="api-key-form">
-            <select id="api-provider">
+    <div id="container">
+        <h1>Web Simulator</h1>
+        <div>
+            <label for="apiType">Select API Type:</label>
+            <select id="apiType">
                 <option value="openai">OpenAI</option>
                 <option value="anthropic">Anthropic</option>
             </select>
-            <input type="text" id="api-key" placeholder="Enter your API key" required>
-            <button type="submit">Submit</button>
-        </form>
-        <form id="prompt-form" style="display: none;">
-            <input type="text" id="prompt" placeholder="Enter your prompt" required>
-            <button type="submit">Generate</button>
-        </form>
-        <div id="output"></div>
-    </div>
-
-    <!-- Modal -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <div id="modal-output"></div>
+        </div>
+        <div>
+            <label for="apiKey">Enter API Key:</label>
+            <input type="text" id="apiKey" placeholder="API Key">
+            <button onclick="verifyApiKey()">Verify API Key</button>
+            <span id="keyStatus"></span>
+        </div>
+        <div>
+            <label for="prompt">Enter your prompt:</label>
+            <input type="text" id="prompt" placeholder="Your prompt here">
+            <button onclick="generateWebPage()">Generate Web Page</button>
+        </div>
+        <div id="loading" style="display:none;">
+            <p>Loading...</p>
+        </div>
+        <div id="webPage" style="display:none;">
+            <iframe id="webPageFrame" width="100%" height="500px"></iframe>
         </div>
     </div>
-
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
