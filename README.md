@@ -16,3 +16,11 @@ DeepDive is a web application that creates the experience of browsing a generati
 - Enter your API key
 - Type a prompt to generate a web page
 
+## TODO
+
+- Improve home page UI
+- Create local API calls and safety guarantees for using API keys
+- Save "best ofs" in home page
+- Host on github pages
+- Create navigation window with multiple modes of manipulation
+
